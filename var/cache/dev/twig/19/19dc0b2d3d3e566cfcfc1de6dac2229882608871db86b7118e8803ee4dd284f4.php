@@ -270,6 +270,6 @@ class __TwigTemplate_3cb139f60b46e029190b8d528cf2f773f26c194209be6c3237b9bcd63eb
     </div>
 {%- endblock -%}
 
-", "@VichUploader/Form/fields.html.twig", "C:\\wamp64\\www\\STAGIAIRES-GUINOT.COM\\vendor\\vich\\uploader-bundle\\templates\\Form\\fields.html.twig");
+", "@VichUploader/Form/fields.html.twig", "C:\\wamp64\\www\\Symfony\\BIOInformatique.com\\vendor\\vich\\uploader-bundle\\templates\\Form\\fields.html.twig");
     }
 }

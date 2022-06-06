@@ -1175,6 +1175,6 @@ class __TwigTemplate_b4b439b05d9bdd0adad566a50b1d63bcfc72f4c1776f625413235276f07
         <span>{{ route|default(controller) }}</span>
     {%- endif %}
 {% endmacro %}
-", "@WebProfiler/Collector/request.html.twig", "C:\\wamp64\\www\\STAGIAIRES-GUINOT.COM\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\request.html.twig");
+", "@WebProfiler/Collector/request.html.twig", "C:\\wamp64\\www\\Symfony\\BIOInformatique.com\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\request.html.twig");
     }
 }

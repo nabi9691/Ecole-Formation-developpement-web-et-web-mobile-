@@ -471,6 +471,6 @@ class __TwigTemplate_c79f244eea991f9413a2acd7ca342977c2128acf1046d36f04eea4fe158
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/twig.html.twig", "C:\\wamp64\\www\\STAGIAIRES-GUINOT.COM\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
+", "@WebProfiler/Collector/twig.html.twig", "C:\\wamp64\\www\\Symfony\\BIOInformatique.com\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
     }
 }

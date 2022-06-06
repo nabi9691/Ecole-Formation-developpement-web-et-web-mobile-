@@ -98,6 +98,6 @@ class __TwigTemplate_3f60559fb56e2a14d127f35af320e2f029d76298c5bb3ca820da1b04c5a
 <p>
 
 </p>
-", "registration/confirmation_email.html.twig", "C:\\wamp64\\www\\STAGIAIRES-GUINOT.COM\\templates\\registration\\confirmation_email.html.twig");
+", "registration/confirmation_email.html.twig", "C:\\wamp64\\www\\Symfony\\BIOInformatique.com\\templates\\registration\\confirmation_email.html.twig");
     }
 }

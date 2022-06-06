@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+afficher la formation :
+{% endblock %}
+
+{% block content %}
+    <h1>
+    Afficher la formation :
+    </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th> Nom de la formation </th>
+                <th> Civilité </th>
+                <th> Contenu </th>
+                <th> Date de la formation </th>
+                 <th> Status </th>
+                </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> {{ formation.id }} </td>
+                <td> {{ formation.nomFormation }} </td>
+                <td> {{ formation.civilite }} </td>
+<td> {{ formation.contenu }} </td>
+                <td> {{ formation.dateFormation|date("d/m/Y") }} </td>
+<td> {{ formation.status }} </td>
+                        </tr>
+        </tbody>
+    </table>
+
+    {% endblock %}

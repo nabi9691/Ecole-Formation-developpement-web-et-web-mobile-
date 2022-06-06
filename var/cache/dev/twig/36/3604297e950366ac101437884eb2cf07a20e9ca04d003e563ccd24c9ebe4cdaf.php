@@ -1671,6 +1671,6 @@ class __TwigTemplate_59ae40dc19e1b83f6707c7658f1a1a1534be4d65c53847a0579be540c09
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "C:\\wamp64\\www\\STAGIAIRES-GUINOT.COM\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "C:\\wamp64\\www\\Symfony\\BIOInformatique.com\\vendor\\doctrine\\doctrine-bundle\\Resources\\views\\Collector\\db.html.twig");
     }
 }

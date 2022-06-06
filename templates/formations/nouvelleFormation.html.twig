@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+ Enregistrement d'une nouvelle formation :
+ {% endblock %}
+
+{% block content %}
+ <br> <br>
+ 
+    <h1> Enregistrement d'un médias : </h1>
+
+    {{ include('formations/formulaireFormation.html.twig') }}<br>
+
+    <a href="{{ path('accueil_index') }}"> Revenir à la page d'accueil :</a><br>
+
+
+{% endblock %}

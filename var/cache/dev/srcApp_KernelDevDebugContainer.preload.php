@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-require __DIR__.'/ContainerIJljU6I/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/Container2ZUDMpd/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -39,12 +39,18 @@ $classes[] = 'Symfony\Bundle\FrameworkBundle\EventListener\ResolveControllerName
 $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Command\ImportUserCommand';
+$classes[] = 'App\Controller\AccueilController';
 $classes[] = 'App\Controller\AdminsController';
 $classes[] = 'App\Controller\AuthentificationController';
 $classes[] = 'App\Controller\ContactsController';
+$classes[] = 'App\Controller\CoursController';
+$classes[] = 'App\Controller\FacturesController';
+$classes[] = 'App\Controller\FormationsController';
 $classes[] = 'App\Controller\HomeController';
+$classes[] = 'App\Controller\LangagesController';
 $classes[] = 'App\Controller\MediasController';
 $classes[] = 'App\Controller\MessagesController';
+$classes[] = 'App\Controller\ProfsController';
 $classes[] = 'App\Controller\RegistrationController';
 $classes[] = 'App\Security\EmailVerifier';
 $classes[] = 'SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelper';
@@ -54,18 +60,30 @@ $classes[] = 'SymfonyCasts\Bundle\VerifyEmail\Generator\VerifyEmailTokenGenerato
 $classes[] = 'Symfony\Component\Mailer\Mailer';
 $classes[] = 'Symfony\Component\Mailer\Transport\Transports';
 $classes[] = 'Symfony\Component\Mailer\Transport';
+$classes[] = 'App\Controller\StagiairesController';
+$classes[] = 'App\Controller\TypesController';
 $classes[] = 'App\Controller\UtilisateursController';
 $classes[] = 'App\Form\ContactsType';
+$classes[] = 'App\Form\FormationsType';
 $classes[] = 'App\Form\MediasType';
 $classes[] = 'App\Form\MessagesType';
 $classes[] = 'App\Form\RegistrationFormEditType';
 $classes[] = 'App\Form\RegistrationFormType';
 $classes[] = 'App\Repository\ActivitesRepository';
+$classes[] = 'App\Repository\AtelierRepository';
 $classes[] = 'App\Repository\AuteursRepository';
 $classes[] = 'App\Repository\CategoriesRepository';
 $classes[] = 'App\Repository\ContactsRepository';
+$classes[] = 'App\Repository\CoursRepository';
+$classes[] = 'App\Repository\FacturesRepository';
+$classes[] = 'App\Repository\FormationsRepository';
+$classes[] = 'App\Repository\FrameworkRepository';
+$classes[] = 'App\Repository\LangagesRepository';
 $classes[] = 'App\Repository\MediasRepository';
 $classes[] = 'App\Repository\MessagesRepository';
+$classes[] = 'App\Repository\ProfsRepository';
+$classes[] = 'App\Repository\StagiairesRepository';
+$classes[] = 'App\Repository\TypesRepository';
 $classes[] = 'App\Repository\UtilisateursRepository';
 $classes[] = 'App\Security\AuthentificationAuthenticator';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController';
@@ -199,6 +217,7 @@ $classes[] = 'Doctrine\DBAL\Logging\DebugStack';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Command\Proxy\EnsureProductionSettingsDoctrineCommand';
 $classes[] = 'Doctrine\Bundle\FixturesBundle\Command\LoadDataFixturesDoctrineCommand';
 $classes[] = 'Doctrine\Bundle\FixturesBundle\Loader\SymfonyFixturesLoader';
+$classes[] = 'App\DataFixtures\FormationsFixtures';
 $classes[] = 'App\DataFixtures\MessagesFixtures';
 $classes[] = 'Doctrine\Bundle\FixturesBundle\Purger\ORMPurgerFactory';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Command\Proxy\ConvertMappingDoctrineCommand';

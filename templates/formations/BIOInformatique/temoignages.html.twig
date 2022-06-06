@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Bienvenu(e) sur la page des médiats !
+{% endblock %}
+
+{% block body %}
+	<style>
+		.contenu {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+
+		.contenu code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+<br/><br/>
+
+{% block content %}
+
+ <div class="container">
+      
+    <h1> Bienvenu(e) sur la page des retrouvailles inhabituels ! </h1>
+    <h1> Retrouvailles et Témoignages ! </h1>
+    <div>
+    <a href="https://youtu.be/vk-wuWhyCsw">Retrouvailles plutôt inhabituelles dans un tribunal ! </a>
+    <p>
+    MIAMI – 30 juin 2015 – Retrouvailles plutôt inhabituelles dans un tribunal de Miami. La juge a en face d'elle un prévenu. Accusé de plusieurs cambriolages, l'homme écoute tête baissée. Jusqu'à cette incroyable scène : "M. Booth, j'ai une question. Êtes-vous allé à l'école Nautilus ?"  l'interroge Mindy Glazer, la juge. "Je suis désolée de vous voir ici. Je me suis toujours demandée ce que vous étiez devenu." poursuit-elle. L'homme éclate en sanglots, répétant la tête entre les mains "Oh mon dieu ".
+    "Il était le meilleur à l'école. Je jouais au foot avec lui. Comme tous les enfants . Et regardez ce qui arrive. Je suis désolée de voir cela. M. Booth, j'espère que vous serez capable de changer 
+    votre comportement. Bonne chance à vous. " a conclu la juge.
+    </p>
+    <br/><br/>
+
+    <a href="https://youtu.be/kY-RibxCgyQ"> On s'était dit rendez-vous dans 10 ans !   </a>
+    <p>
+    Aujourd’hui on se replonge dans nos années lycée ! Marqués par des amis 
+    ou des professeurs, ils se sont donnés rendez-vous comme dans la chanson : dans 10, 
+    20 ou même 30 ans. 
+    des hommes et des femmes qui évoquent des événements marquants de leur existence.
+    » diffusée le 11/12/2019 à 13.50 sur France 2.
+    </p>
+    <br/><br/>
+
+    <a href="https://youtu.be/mm42WPo5U9g"> retrouvailles 75 ans après  ! </a>
+    <p>
+    Découvrez l'histoire de deux sœurs séparées pendant la seconde guerre mondiale et réunies grâce aux efforts de nos équipes du Rétablissement des Liens Familiaux (RLF)
+    </p>        
+ </div>
+
+
+<br/><br/>
+{% block footer %}
+<div>
+<h3>
+Pied de page :
+
+Cliquer ici pour plus de informations !
+</h3>
+<lu>
+    <li><a href="{{ path('mediats_index') }}"> Liste des médiats ! </a></li>
+        </lu>
+    <p>
+    nos équipes du ... !
+    </p>        
+</div>
+{% endblock %}
+
+{% endblock %}
+{% endblock %}

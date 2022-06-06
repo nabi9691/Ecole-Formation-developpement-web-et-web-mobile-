@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Liste des formations : 
+ {% endblock %}
+
+{% block body %}
+
+{% block content %}
+<div>
+    <h1>
+     bienvenu(e) !
+     Liste des formations :
+     </h1>
+
+    <br /><br />
+    <hr />
+    <br />
+    <a href="{{ path('nouvelleFormation_index') }}">Ajouter Une Nouvelle Formation ! </a>
+<br /><br />
+    
+    
+    <table border="1">
+            
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th> Nom de la formation </th>
+                    <th> Votre civilité </th>
+                    <th> Contenu </th>
+                    <th> Date de la formation</th>
+                                        <th> Status </th>
+                <th> Modifier </th>
+<th> Afficher </th>
+<th> Supprimer </t  h>
+</tr>
+            </thead>
+            {% for formation in formations %}
+<tbody>
+        <tr>
+                <td> {{ formation.id }} </td>
+                <td> {{ formation.nomFormation }} </td>
+                <td> {{ formation.civilite }} </td>
+                <td> {{ formation.contenu }} </td>
+                                <td> {{ formation.dateFormation|date("d/m/Y") }} </td>
+<td> {{ formation.status }} </td>
+                
+                <td><a href="{{ path('modifierFormations_index', {'id': formation.id }) }}">Modifier</a></td>
+<td><a href="{{ path('afficherFormations_index', {'id': formation.id }) }}">afficher</a></td>
+<td><a href="{{ path('supprimerFormations_index', {'id': formation.id }) }}">Supprimer</a></td>
+                {% else %}
+                <td colspan="5">
+                    Vous n'avez pas de médiats enregistré dans votre base de données !
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}
+
+<br/><br/>
+
+{% block footer %}
+{% endblock %}
+
+{% endblock %}

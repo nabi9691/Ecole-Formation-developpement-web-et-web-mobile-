@@ -53,7 +53,7 @@ class Messages
 
     /**
      * @ORM\ManyToOne(targetEntity=Utilisateurs::class, inversedBy="message_envoyer", cascade={"persist"})
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $expediteur;
 

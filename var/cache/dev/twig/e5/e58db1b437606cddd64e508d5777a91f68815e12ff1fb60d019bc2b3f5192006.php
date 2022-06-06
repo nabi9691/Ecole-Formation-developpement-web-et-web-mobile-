@@ -291,6 +291,6 @@ class __TwigTemplate_e7ea5f75fdd2b4108b75aaa08083c37597c6457e5bf4930e0c702698797
         </tbody>
     </table>
 {% endblock %}
-", "@VichUploader/Collector/mapping_collector.html.twig", "C:\\wamp64\\www\\STAGIAIRES-GUINOT.COM\\vendor\\vich\\uploader-bundle\\templates\\Collector\\mapping_collector.html.twig");
+", "@VichUploader/Collector/mapping_collector.html.twig", "C:\\wamp64\\www\\Symfony\\BIOInformatique.com\\vendor\\vich\\uploader-bundle\\templates\\Collector\\mapping_collector.html.twig");
     }
 }

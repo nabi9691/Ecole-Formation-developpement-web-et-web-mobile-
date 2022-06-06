@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Bienvenu(e) sur la page des formations à Guinot !
+{% endblock %}
+
+{% block body %}
+	<style>
+		.contenu {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+
+		.contenu code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+<br/><br/>
+
+{% block content %}
+
+ <div class="container">
+<br/><br/>
+      
+    <h1> 
+Bienvenu(e) sur la page des formations à Guinot !
+
+</h1>
+
+<br/><br/>
+    
+    <div>
+    
+<h1> Liste des formations deGuinot : </h1>
+    
+    <lu>
+
+<li> NOS FORMATIONS :</li>    
+<li><a href="{{ path('conseillerGuinot_index') }}"> Conseiller Relation Client à Distance ! </a></li>
+<li><a href="{{ path('masseurGuinot_index') }}"> Masseur-Kinésithérapeute ! </a></li>
+<li><a href="{{ path('developpeurGuinot_index') }}"> Développeur Web et Web Mobile ! </a></li>
+</lu>
+    </div>
+<br/><br/>
+
+{% block footer %}
+<div>
+<h3>
+Pied de page :
+
+Cliquer ici pour plus de informations !
+</h3>
+<lu>
+    <li><a href="{{ path('mediats_index') }}"> Liste des médiats ! </a></li>
+        </lu>
+    
+</div>
+{% endblock %}
+
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Modifier une formation  :
+{% endblock %}
+
+{% block content %}
+    
+    
+    <h1>
+        Modifier une formation :
+        </h1>
+
+{{ form_start(formFormations) }}
+
+Nom de la formation: {{ form_widget(formFormations.nom_formation) }}<br>
+Civilité: {{ form_widget(formFormations.civilite) }} <br>
+Contenu: {{ form_widget(formFormations.contenu) }} <br>
+Date de la formation: {{ form_widget(formFormations.date_formation) }} <br>
+Status: {{ form_widget(formFormations.status) }} <br>
+
+
+    
+
+<button type="submit" class="btn btn-success">envoyer</button>
+
+
+      
+    {{ form_end(formFormations) }}
+
+
+
+
+
+    {% endblock %}

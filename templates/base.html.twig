@@ -23,57 +23,67 @@
                     
                     {% if app.user %}
                     <li><a href="{{ path('accueil_index') }}"> accueil </a></li>
+<li><a href="{{ path('formations_index') }}">Liste de nos formations </a> </li>
 
-<li><a href="{{ path('pageAccueilGuinot_index') }}"> Page d'accueil de GUINOT ! </a></li>
-
-<li><a href="{{ path('medias_index') }}"> Liste des médias ! </a></li>
-<li><a href="{{ path('contacts_index') }}"> Liste des contacts ! </a></li>
-
-<li><a href="{{ path('message_index') }}"> Liste des messages : </a></li>
-<li><a href="{{ path('utilisateur_index') }}"> Liste des utilisateurs : </a></li>
+<li><a href="{{ path('pageAccueilBIOInformatique_index') }}">A propos de BIOInformatique ! </a></li>
+<li><a href="{{ path('message_index') }}"> Messagerie de BIOInformatique.com : </a></li>
+<li><a href="{{ path('utilisateur_index') }}"> Liste des stagiaires : </a></li>
 
                     <li><a href="{{ path('app_logout') }}"> se déconnecter </a></li>
 
 
 {% if is_granted('ROLE_ADMIN') %}
-<li><a href="{{ path('utilisateur_index') }}"> Liste des utilisateurs : </a></li>
-<li><a href="{{ path('message_index') }}"> Liste des messages : </a></li>
+<li><a href="{{ path('accueil_index') }}"> accueil </a></li>
+<li><a href="{{ path('formations_index') }}">Liste de nos formations </a> </li>
+
+<li><a href="{{ path('utilisateur_index') }}"> Liste des stagiaires : </a></li>
+<li><a href="{{ path('message_index') }}"> accéder au service de tchat public !</a></li>
+
 {% endif %}
 
 
 {% if is_granted('ROLE_ABONNER') %}
+<li><a href="{{ path('accueil_index') }}"> accueil </a></li>
+<li><a href="{{ path('formations_index') }}">Liste de nos formations </a> </li>
+
 <li><a href="{{ path('pageAccueilEspacePerso_index') }}">Page d'accueil de votre espace perso ! </a> </li>
 <li><a href="{{ path('monEspacePersonel_index') }}">Mon espace personnel : </a> </li>
+<li><a href="{{ path('message_index') }}"> accéder au service de tchat public !</a></li>
+<li><a href="{{ path('utilisateur_index') }}"> Liste des stagiaires : </a></li>
+
+
 {% endif %}
 
 
                     {% else %}
 <li><a href="{{ path('accueil_index') }}"> accueil </a></li>
-                    
+
+<li><a href="{{ path('formations_index') }}">Liste de nos formations </a> </li>
+
+<li><a href="{{ path('message_index') }}"> accéder au service de tchat public !</a></li>
+<li><a href="{{ path('utilisateur_index') }}"> Liste des stagiaires : </a></li>
+
+
                     <li><a href="{{ path('app_login') }}"> Se connecter </a> </li>
                     <li><a href="{{ path('app_register') }}"> Création de compte </a> </li>
                                 <li><a href="{{ path('app_logout') }}"> se déconnecter </a></li>
-
-<li><a href="{{ path('pageAccueilGuinot_index') }}"> Page d'accueil de GUINOT ! </a></li>
-
-<li><a href="{{ path('medias_index') }}"> Liste des médias ! </a></li>
-<li><a href="{{ path('contacts_index') }}"> Liste des contacts ! </a></li>
-
-<li><a href="{{ path('message_index') }}"> accéder au service de tchat public !</a></li>
-<li><a href="{{ path('utilisateur_index') }}"> Liste des utilisateurs : </a></li>
                                             
                                             {% endif %}
 
                     {% if 'register' == app.request.attributes.get('_route') %}
-<li><a href="{{ path('utilisateur_index') }}"> Liste des utilisateurs : </a></li>
+<li><a href="{{ path('accueil_index') }}"> accueil </a></li>
 
-<li><a href="{{ path('message_index') }}"> Liste des messages </a> </li>
+<li><a href="{{ path('utilisateur_index') }}"> Liste des stagiaires : </a></li>
+
+<li><a href="{{ path('message_index') }}">Messagerie  </a> </li>
+<li><a href="{{ path('formations_index') }}">Liste de nos formations </a> </li>
                     
                     {% endif %}
                         
                         {% if 'login' == app.request.attributes.get('_route') %}
-<li><a href="{{ path('utilisateur_index') }}"> Liste des utilisateurs : </a></li>
-<li><a href="{{ path('message_index') }}"> Liste des messages </a> </li>
+<li><a href="{{ path('utilisateur_index') }}"> Liste des stagiaires : </a></li>
+<li><a href="{{ path('message_index') }}"> Messagerie </a> </li>
+<li><a href="{{ path('formations_index') }}">Liste de nos formations </a> </li>
 
                     {% endif %}
                 </ul>

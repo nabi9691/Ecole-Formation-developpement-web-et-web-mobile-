@@ -293,6 +293,6 @@ Veuillez vous inscrire
 
 
 {% endblock %}
-", "registration/register.html.twig", "C:\\wamp64\\www\\STAGIAIRES-GUINOT.COM\\templates\\registration\\register.html.twig");
+", "registration/register.html.twig", "C:\\wamp64\\www\\Symfony\\BIOInformatique.com\\templates\\registration\\register.html.twig");
     }
 }

@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Bienvenu(e) sur le site : ANCIENS RETROUVAILLES DE GUINOT !
+{% endblock %}
+
+{% block content %}
+
+ <div class="container">
+      
+<hr/>
+<br/>
+
+<h1>
+Retrouvez les anciens stagiaires de Guinot !    
+    </h1>
+
+
+  {% if app.user and
+   app.user.medias|length > 0 %}
+        {% for medias in app.user.medias %}
+            <img src="{{ vich_uploader_asset(medias, 'imageFile') }}" alt="{{ medias.contenu }}">
+        {% endfor %}      
+    {% endif %}
+
+
+<br/>
+<hr/>
+<br/>
+<h3> Nos stagiaires d'aujourd'hui, sont nos formateurs de demain !</h3> 
+    </div>
+
+<br/><br/>
+
+{% block footer %}
+<div>
+<h1>Cliquer ici pour plus de informations !</h1>
+<a href="{{ path('historiqueGuinot_index') }}"> Qui somme nous ?</a></li>
+<lu>
+    <li>Formations :</li>
+    <li>  Masseur-Kinésithérapeute !</li>
+    <li>  Conseiller Relation Client à Distance !</li>
+<li>  Développeur Web et Web Mobile  !</li>
+<li> 24-26 bd Chastenet de Géry </li>
+<li> 94814 Villejuif Cedex </li>
+<li> Tél : 01 46 78 01 00 </li>
+<li> Fax : 01 46 78 50 35</li>
+<li> paul   guinot@guinot.asso.fr </li>
+</lu>
+</div>
+{% endblock %}
+
+
+{% endblock %}
