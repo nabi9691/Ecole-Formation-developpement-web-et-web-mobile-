@@ -1,0 +1,15 @@
+
+    
+{{ form_start(formActivites) }}
+
+Nom: {{ form_widget(formActivites.nom) }}<br>
+Contenu: {{ form_widget(formActivites.contenu) }} <br>
+Date: {{ form_widget(formActivites.date) }} <br>
+Status: {{ form_widget(formActivites.status) }} <br>
+
+
+<button type="submit" class="btn btn-success">envoyer</button>
+
+
+      
+    {{ form_end(formActivites) }}

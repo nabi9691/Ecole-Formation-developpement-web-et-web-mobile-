@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Modifier une activité :
+{% endblock %}
+
+{% block content %}
+    
+    
+    <h1>
+        Modifier une activités :
+        </h1>
+
+{{ form_start(formActivites) }}
+
+Nom de l'activité: {{ form_widget(formActivites.nom) }}<br>
+Contenu: {{ form_widget(formActivites.contenu) }} <br>
+Date: {{ form_widget(formActivites.date) }} <br>
+Status: {{ form_widget(formActivites.status) }} <br>
+
+
+
+
+<button type="submit" class="btn btn-success">envoyer</button>
+
+
+      
+    {{ form_end(formActivites) }}
+
+
+
+
+
+    {% endblock %}

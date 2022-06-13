@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+afficher activités :
+{% endblock %}
+
+{% block content %}
+    <h1>
+    Afficher activités :
+    </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th> Titre </th>
+                <th> Contenu </th>
+                <th> Date </th>
+                 <th> Status </th>
+                </tr>
+        </thead>
+        <tbody>
+            <tr>
+<td> {{ activite.id }} </td>
+                <td> {{ activite.nom }} </td>
+                <td> {{ activite.contenu }} </td>
+                <td> {{ activite.date|date("d/m/Y") }} </td>
+    <td> {{ activite.status }} </td>
+                        
+                        </tr>
+        </tbody>
+    </table>
+
+    {% endblock %}

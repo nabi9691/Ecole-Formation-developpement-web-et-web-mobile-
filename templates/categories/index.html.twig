@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des catégories :
+{% endblock %}
+
+{% block body %}
+	<style>
+		.contenu {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+
+		.contenu code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+<br/><br/>
+
+
+{% block content %}
+	<div class="container">
+
+
+<h1>
+			Liste des catégories :
+</h1>
+<br/><br/>
+<hr/>
+<br/>
+<a href="{{ path('nouvelleCategories_index') }}">Ajouter une nouvelle catégorie  :</a>
+
+<br/><br/>
+
+<table border="1">
+<thead>
+<tr>
+<th> Id </th>
+<th> Nom </th>
+<th> Contenu </th>
+<th> Modifier </th>
+<th> Afficher </th>
+<th> Supprimer </th>
+</tr>
+</thead>
+{% for categorie in categorie %}
+
+<tbody>
+<tr>
+<td>{{ categorie.id }}</td>
+<td>{{ categorie.nomCategorie }}</td>
+<td>{{ categorie.contenuCategorie }}</td>
+                
+<td><a href="{{ path('modifierCategories_index', {'id': categorie.id }) }}">Modifier</a></td>
+<td><a href="{{ path('afficherCategories_index', {'id': categorie.id }) }}">afficher</a></td>
+<td><a href="{{ path('supprimerCategories_index', {'id': categorie.id }) }}">Supprimer</a></td>
+</tr>
+
+                {% else %}
+                <td colspan="5">
+                    Vous n'avez pas de catégories enregistré dans votre base de données !
+                </td>
+
+</tr>
+
+</tbody>
+{% endfor %}
+
+</table>
+</div>
+{% endblock %}
+
+<br/><br/>
+
+
+{% endblock %}

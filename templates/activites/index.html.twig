@@ -1,20 +1,67 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ActivitesController!{% endblock %}
+{% block title %}
+Liste des activités : 
+ {% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+{% block content %}
+<div>
+    <h1>
+     bienvenu(e) !
+     Liste des activités :
+     </h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/Anciens-Stagiaires-Guinot-1/src/Controller/ActivitesController.php'|file_link(0) }}">src/Controller/ActivitesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/Anciens-Stagiaires-Guinot-1/templates/activites/index.html.twig'|file_link(0) }}">templates/activites/index.html.twig</a></code></li>
-    </ul>
+    <br /><br />
+    <hr />
+    <br />
+    <a href="{{ path('nouvelleActivites_index') }}">Ajouter Une Nouvelle activités ! </a>
+<br /><br />
+    
+    
+    <table border="1">
+            
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th> Titre </th>
+                    <th> Contenu </th>
+                    <th> Date </th>
+                                        <th> Status </th>
+                <th> Modifier </th>
+<th> Afficher </th>
+<th> Supprimer </t  h>
+</tr>
+            </thead>
+            {% for activite in activite %}
+<tbody>
+        <tr>
+                <td> {{ activite.id }} </td>
+                <td> {{ activite.nom }} </td>
+                <td> {{ activite.contenu }} </td>
+                <td> {{ activite.date|date("d/m/Y") }} </td>
+<td> {{ activite.status  }} </td>
+
+                <td><a href="{{ path('modifierActivites_index', {'id': activite.id }) }}">Modifier</a></td>
+<td><a href="{{ path('afficherActivites_index', {'id': activite.id }) }}">afficher</a></td>
+<td><a href="{{ path('supprimerActivites_index', {'id': activite.id }) }}">Supprimer</a></td>
+
+            {% else %}
+                <td colspan="5">
+                    Vous n'avez pas de médiats enregistré dans votre base de données !
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
 </div>
+{% endblock %}
+
+<br/><br/>
+
+{% block footer %}
+{% endblock %}
+
 {% endblock %}

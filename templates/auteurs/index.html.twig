@@ -1,20 +1,80 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AuteursController!{% endblock %}
+{% block title %}Liste des auteurs :
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+	<style>
+		.contenu {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+		.contenu code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+<br/><br/>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/Anciens-Stagiaires-Guinot-1/src/Controller/AuteursController.php'|file_link(0) }}">src/Controller/AuteursController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/Anciens-Stagiaires-Guinot-1/templates/auteurs/index.html.twig'|file_link(0) }}">templates/auteurs/index.html.twig</a></code></li>
-    </ul>
+
+{% block content %}
+	<div class="container">
+
+
+<br/><br/>
+		<h1>
+			Liste des auteurs :
+</h1>
+<br/><br/>
+
+<a href="{{ path('nouvelAuteur_index') }}">Nouvel auteur :</a>
+
+<hr/>
+<br/>
+
+<table border="1">
+<thead>
+<tr>
+<th> Id </th>
+<th> Nom </th>
+<th> Contenu </th>
+<th> Date de création </th>
+<th> Status </th>
+<th> Modifier </th>
+<th> Afficher </th>
+<th> Supprimer </th>
+</tr>
+</thead>
+{% for auteur in auteur %}
+<tbody>
+<tr>
+<td>{{ auteur.id }}</td>
+<td>{{ auteur.nom }}</td>
+<td>{{ auteur.contenu }}</td>
+<td>{{ auteur.date|date("d/m/Y")  }}</td>
+<td>{{ auteur.status }}</td>
+                
+<td><a href="{{ path('modifierAuteurs_index', {'id': auteur.id }) }}">Modifier</a></td>
+<td><a href="{{ path('afficherAuteurs_index', {'id': auteur.id }) }}">afficher</a></td>
+<td><a href="{{ path('supprimerAuteurs_index', {'id': auteur.id }) }}">Supprimer</a></td>
+                {% else %}
+                <td colspan="5">
+                    Vous n'avez pas d'auteurs enregistré dans votre base de données !
+                </td>
+
+</tr>
+
+</tbody>
+{% endfor %}
+
+</table>
 </div>
+{% endblock %}
+
+<br/><br/>
+
+
 {% endblock %}

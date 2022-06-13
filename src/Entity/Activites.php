@@ -23,6 +23,12 @@ class Activites
     private $nom;
 
     /**
+     * @ORM\Column(type="date")
+     */
+    private $date;
+
+
+    /**
      * @ORM\Column(type="string", length=255)
      */
     private $status;
@@ -30,18 +36,14 @@ class Activites
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $resume;
-
-    /**
-     * @ORM\ManyToOne(targetEntity=Utilisateurs::class, inversedBy="acitivites")
-     */
-    private $utilisateurs;
+    private $contenu;
 
     /**
      * @ORM\ManyToOne(targetEntity=Utilisateurs::class, inversedBy="activites")
      */
-    private $utilisateur;
+    private $utilisateurs;
 
+    
     public function getId(): ?int
     {
         return $this->id;
@@ -71,14 +73,14 @@ class Activites
         return $this;
     }
 
-    public function getResume(): ?string
+    public function getContenu(): ?string
     {
-        return $this->resume;
+        return $this->contenu;
     }
 
-    public function setResume(string $resume): self
+    public function setContenu(string $contenu): self
     {
-        $this->resume = $resume;
+        $this->contenu = $contenu;
 
         return $this;
     }
@@ -95,15 +97,17 @@ class Activites
         return $this;
     }
 
-    public function getUtilisateur(): ?Utilisateurs
+    public function getDate(): ?\DateTimeInterface
     {
-        return $this->utilisateur;
+        return $this->date;
     }
 
-    public function setUtilisateur(?Utilisateurs $utilisateur): self
+    public function setDate(\DateTimeInterface $date): self
     {
-        $this->utilisateur = $utilisateur;
+        $this->date = $date;
 
         return $this;
     }
+
+
 }

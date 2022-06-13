@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+ Enregistrement d'une activité :
+ {% endblock %}
+
+{% block content %}
+ <br> <br>
+ 
+    <h1> Enregistrement d'une activité : </h1>
+
+    {{ include('activites/formulaireActivites.html.twig') }}<br>
+
+    <a href="{{ path('activites_index') }}">Liste des activjités :</a><br>
+
+
+{% endblock %}

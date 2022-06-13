@@ -43,8 +43,8 @@ class Medias
     private $date;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Utilisateurs::class, inversedBy="medias")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToOne(targetEntity=Utilisateurs::class, inversedBy="medias", cascade={"persist"})
+* @ORM\JoinColumn(nullable=false)
      */
     private $utilisateurs;
 

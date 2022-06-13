@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+ Enregistrement d'un auteur 
+ {% endblock %}
+
+{% block content %}
+ <br> <br>
+ 
+    <h1> Enregistrement d'un auteurs </h1>
+
+    {{ include('auteurs/formulaireAuteur.html.twig') }}<br>
+
+    <a href="{{ path('auteurs_index') }}">Liste des auteurs :</a><br>
+
+
+{% endblock %}

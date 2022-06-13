@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+afficher catégorie :
+{% endblock %}
+
+{% block content %}
+    <h1>
+    Afficher catégorie :
+    </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th> Nom </th>
+                 <th>Contenu </th>
+                </tr>
+        </thead>
+        <tbody>
+            <tr>
+<td>{{ categorie.id }}</td>
+<td>{{ categorie.nomCategorie }}</td>
+<td>{{ categorie.contenuCategorie }}</td>
+</tr>
+        </tbody>
+    </table>
+
+    {% endblock %}
